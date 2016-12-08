@@ -2,8 +2,7 @@
 	"manifest_version": 2,
 	"name": "Webplayer Hotkeys",
 	"version": "1.1",
-	"default_locale": "en",
-	"description": "A Chrome extension that assigns hotkeys to play/pause, and switch music (next and previous) and opens up Spotify if currently there is no player opened."
+	"description": "A Chrome extension that assigns hotkeys to play/pause, and switch music (next and previous) and opens up Spotify if currently there is no player opened.",
 	"icons": {
 		"128": "icon.png"
 	},
