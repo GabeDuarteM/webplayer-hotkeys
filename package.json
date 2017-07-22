@@ -15,11 +15,10 @@
     "lint-prettier": "prettier --debug-check -l --no-semi --print-width 120 --parser typescript \"**/*.ts\"",
     "webpack": "webpack --progress"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/chrome": "^0.0.47",
     "@types/node": "^8.0.14",
     "@types/webpack": "^3.0.4",
-    "@types/webpack-env": "^1.13.0",
     "awesome-typescript-loader": "^3.2.1",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
