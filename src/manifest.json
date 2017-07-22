@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Webplayer Hotkeys",
+  "version": "1.1",
+  "description": "A Chrome extension that assigns hotkeys to play/pause, and switch music (next and previous) and opens up Spotify if currently there is no player opened.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "author": "Gabriel Duarte",
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "prev": {
+      "description": "Música anterior",
+      "suggested_key": "Alt+Shift+Comma",
+      "global": true
+    },
+    "play": {
+      "description": "Play/pause",
+      "suggested_key": "Alt+Shift+P",
+      "global": true
+    },
+    "next": {
+      "description": "Próxima música",
+      "suggested_key": "Alt+Shift+Period",
+      "global": true
+    }
+  },
+  "homepage_url": "https://github.com/GabrielQDuarte/Webplayer-Hotkeys/tree/master",
+  "incognito": "split",
+  "permissions": ["*://*.spotify.com/*", "*://*.youtube.com/*", "*://soundcloud.com/*", "*://*.deezer.com/*", "tabs"]
+}
