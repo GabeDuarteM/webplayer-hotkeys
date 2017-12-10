@@ -24,7 +24,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "prettier": "^1.5.3",
     "source-map-loader": "^0.2.1",
-    "ts-node": "^3.2.1",
+    "ts-node": "^4.0.0",
     "tslint": "^5.5.0",
     "typescript": "^2.4.2",
     "webpack": "^3.3.0"
