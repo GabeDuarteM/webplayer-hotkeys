@@ -112,3 +112,7 @@ function OpenDefaultPlayer() {
     chrome.tabs.create({ url: defaultPlayer.url })
   }
 }
+
+chrome.runtime.onInstalled.addListener(details => {
+  chrome.tabs.create({ url: chrome.runtime.getURL("first-time/index.html") })
+})

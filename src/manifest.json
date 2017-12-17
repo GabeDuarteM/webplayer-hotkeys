@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Webplayer Hotkeys",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Assign hotkeys to play/pause, and switch music. Works with Spotify, Deezer, SoundCloud and Youtube.",
   "icons": {
     "128": "icon.png"

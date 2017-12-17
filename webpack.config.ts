@@ -21,7 +21,11 @@ function getMergedConfig({ env }: IMergedConfigParams): webpack.Configuration {
 }
 
 function getPatterns(): IPattern[] {
-  return [{ from: join("src", "icon.png") }, { from: join("src", "manifest.json") }]
+  return [
+    { from: join("src", "icon.png") },
+    { from: join("src", "manifest.json") },
+    { from: join("src", "first-time"), to: "first-time" },
+  ]
 }
 
 function getBaseConfig(): webpack.Configuration {
