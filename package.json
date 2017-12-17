@@ -12,21 +12,21 @@
     "build-ci": "yarn lint && yarn build-dev && yarn build",
     "lint": "yarn lint-tslint && yarn lint-prettier",
     "lint-tslint": "tslint 'src/**/*.ts' '*.ts'",
-    "lint-prettier": "prettier --debug-check -l --no-semi --print-width 120 --parser typescript \"**/*.ts\"",
+    "lint-prettier": "prettier **/*.ts -l",
     "webpack": "webpack --progress"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.48",
-    "@types/node": "^8.0.14",
-    "@types/webpack": "^3.0.4",
-    "awesome-typescript-loader": "^3.2.1",
-    "clean-webpack-plugin": "^0.1.16",
-    "copy-webpack-plugin": "^4.0.1",
-    "prettier": "^1.5.3",
-    "source-map-loader": "^0.2.1",
-    "ts-node": "^3.2.1",
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.2",
-    "webpack": "^3.3.0"
+    "@types/chrome": "^0.0.56",
+    "@types/node": "^8.5.1",
+    "@types/webpack": "^3.8.1",
+    "awesome-typescript-loader": "^3.4.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.3.0",
+    "prettier": "^1.9.2",
+    "source-map-loader": "^0.2.3",
+    "ts-node": "^4.0.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
   }
 }
