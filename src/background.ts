@@ -5,46 +5,46 @@ const players: IPlayer[] = [
     controlQueries: {
       next: ".spoticon-skip-forward-16",
       play: ".player-controls__buttons button:nth-child(3)",
-      prev: ".spoticon-skip-back-16"
+      prev: ".spoticon-skip-back-16",
     },
     default: true,
     tabQuery: "*://*.spotify.com/*",
     title: "spotify",
-    url: "https://play.spotify.com/"
+    url: "https://play.spotify.com/",
   },
   {
     controlQueries: {
       next: ".control.control-next",
       play: ".control.control-play",
-      prev: ".control.control-prev"
+      prev: ".control.control-prev",
     },
     default: false,
     tabQuery: "*://*.deezer.com/*",
     title: "deezer",
-    url: "https://www.deezer.com/"
+    url: "https://www.deezer.com/",
   },
   {
     controlQueries: {
       next: ".skipControl__next",
       play: ".playControl",
-      prev: ".skipControl__previous"
+      prev: ".skipControl__previous",
     },
     default: false,
     tabQuery: "*://soundcloud.com/*",
     title: "soundcloud",
-    url: "https://soundcloud.com/"
+    url: "https://soundcloud.com/",
   },
   {
     controlQueries: {
       next: ".ytp-next-button.ytp-button",
       play: ".ytp-play-button.ytp-button",
-      prev: ".ytp-prev-button.ytp-button"
+      prev: ".ytp-prev-button.ytp-button",
     },
     default: false,
     tabQuery: "*://www.youtube.com/watch?v=*",
     title: "youtube",
-    url: "https://www.youtube.com/"
-  }
+    url: "https://www.youtube.com/",
+  },
 ]
 
 chrome.commands.onCommand.addListener(onCommand)
