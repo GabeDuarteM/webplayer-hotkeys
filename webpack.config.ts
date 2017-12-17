@@ -30,12 +30,12 @@ function getBaseConfig(): webpack.Configuration {
     output: {
       filename: "background.js",
       path: join(__dirname, "dist"),
-      publicPath: "/"
+      publicPath: "/",
     },
     plugins: [new CleanWebpackPlugin(["dist"]), CopyWebpackPlugin(getPatterns())],
     resolve: {
-      extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
-    }
+      extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+    },
   }
 }
 
@@ -49,23 +49,23 @@ function getProdConfig(baseConfig: webpack.Configuration): webpack.Configuration
       rules: [
         {
           test: /\.(t|j)s?$/,
-          use: { loader: "awesome-typescript-loader" }
+          use: { loader: "awesome-typescript-loader" },
         },
-        { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
-      ]
+        { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+      ],
     },
     plugins: [
       ...(baseConfig.plugins as webpack.Plugin[]),
       new webpack.DefinePlugin({
         "process.env": {
-          NODE_ENV: JSON.stringify("production")
-        }
+          NODE_ENV: JSON.stringify("production"),
+        },
       }),
       new webpack.optimize.UglifyJsPlugin({
         comments: false,
-        compress: true
-      })
-    ]
+        compress: true,
+      }),
+    ],
   }
 }
 
@@ -76,20 +76,20 @@ function getDevConfig(baseConfig): webpack.Configuration {
         {
           exclude: /node_modules/,
           test: /\.(t|j)s?$/,
-          use: { loader: "awesome-typescript-loader" }
+          use: { loader: "awesome-typescript-loader" },
         },
-        { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
-      ]
+        { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+      ],
     },
     plugins: [
       ...baseConfig.plugins,
       new webpack.DefinePlugin({
         "process.env": {
-          NODE_ENV: JSON.stringify("development")
-        }
+          NODE_ENV: JSON.stringify("development"),
+        },
       }),
-      new webpack.NamedModulesPlugin()
-    ]
+      new webpack.NamedModulesPlugin(),
+    ],
   }
 }
 
