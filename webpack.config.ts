@@ -1,3 +1,4 @@
+import * as BabelMinifyPlugin from "babel-minify-webpack-plugin"
 import * as CleanWebpackPlugin from "clean-webpack-plugin"
 import CopyWebpackPlugin from "copy-webpack-plugin"
 import { join, resolve } from "path"
@@ -61,10 +62,7 @@ function getProdConfig(baseConfig: webpack.Configuration): webpack.Configuration
           NODE_ENV: JSON.stringify("production"),
         },
       }),
-      new webpack.optimize.UglifyJsPlugin({
-        comments: false,
-        compress: true,
-      }),
+      new BabelMinifyPlugin(undefined, { comments: false }) as any,
     ],
   }
 }
