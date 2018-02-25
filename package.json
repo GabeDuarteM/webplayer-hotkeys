@@ -28,6 +28,6 @@
     "ts-node": "^4.0.2",
     "tslint": "^5.8.0",
     "typescript": "^2.6.2",
-    "webpack": "^3.10.0"
+    "webpack": "^4.0.0"
   }
 }
