@@ -19,7 +19,7 @@
     "@types/chrome": "^0.0.56",
     "@types/node": "^8.5.1",
     "@types/webpack": "^3.8.1",
-    "awesome-typescript-loader": "^3.4.1",
+    "awesome-typescript-loader": "^4.0.0",
     "babel-minify-webpack-plugin": "^0.2.0",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.3.0",
