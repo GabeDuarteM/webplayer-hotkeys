@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/chrome": "^0.0.56",
     "@types/node": "^8.5.1",
-    "@types/webpack": "^3.8.1",
+    "@types/webpack": "^4.0.0",
     "awesome-typescript-loader": "^3.4.1",
     "babel-minify-webpack-plugin": "^0.2.0",
     "clean-webpack-plugin": "^0.1.17",
