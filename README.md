@@ -1,7 +1,6 @@
 # Webplayer-Hotkeys
 
 [![Travis](https://img.shields.io/travis/GabrielDuarteM/webplayer-hotkeys/master.svg)](https://travis-ci.org/GabrielDuarteM/webplayer-hotkeys)
-[![bitHound Dev Dependencies](https://img.shields.io/bithound/devDependencies/github/GabrielDuarteM/Webplayer-Hotkeys.svg)](https://www.bithound.io/github/GabrielDuarteM/Webplayer-Hotkeys/master/dependencies/npm)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
