@@ -47,19 +47,16 @@ const players: IPlayer[] = [
   },
 ]
 
-chrome.commands.onCommand.addListener(onCommand)
-
-function onCommand(command: ICommand): void {
-  CheckOpenedPlayers().then(openedPlayers => {
-    if (openedPlayers.length) {
-      ExecuteCommandPlayer(openedPlayers[0], command)
-    } else {
-      OpenDefaultPlayer()
-    }
-  })
+const onCommand = async (command: ICommand): Promise<void> => {
+  const openedPlayers = await CheckOpenedPlayers()
+  if (openedPlayers.length) {
+    ExecuteCommandPlayer(openedPlayers[0], command)
+  } else {
+    OpenDefaultPlayer()
+  }
 }
 
-function CheckOpenedPlayers(): Promise<IPlayerTab[]> {
+const CheckOpenedPlayers = (): Promise<IPlayerTab[]> => {
   return new Promise<IPlayerTab[]>((resolve, reject) => {
     try {
       const openedPlayers: IPlayerTab[] = []
@@ -82,7 +79,10 @@ function CheckOpenedPlayers(): Promise<IPlayerTab[]> {
   })
 }
 
-function ExecuteCommandPlayer(openedPlayer: IPlayerTab, command: ICommand): void {
+const ExecuteCommandPlayer = (
+  openedPlayer: IPlayerTab,
+  command: ICommand,
+): void => {
   const querySelector = GetSelector(openedPlayer.player, command)
   const code = `document.querySelector('${querySelector}').click()`
 
@@ -91,7 +91,7 @@ function ExecuteCommandPlayer(openedPlayer: IPlayerTab, command: ICommand): void
   }
 }
 
-function GetSelector(player: IPlayer, command: ICommand) {
+const GetSelector = (player: IPlayer, command: ICommand) => {
   switch (command) {
     case "prev":
       return player.controlQueries.prev
@@ -105,13 +105,15 @@ function GetSelector(player: IPlayer, command: ICommand) {
   }
 }
 
-function OpenDefaultPlayer() {
+const OpenDefaultPlayer = () => {
   const defaultPlayer = players.find(x => x.default)
 
   if (defaultPlayer) {
     chrome.tabs.create({ url: defaultPlayer.url })
   }
 }
+
+chrome.commands.onCommand.addListener(onCommand as any)
 
 chrome.runtime.onInstalled.addListener(details => {
   chrome.tabs.create({ url: chrome.runtime.getURL("first-time/index.html") })

@@ -2,17 +2,11 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
-    "strictNullChecks": true,
+    "strict": true,
     "module": "commonjs",
-    "target": "es6",
+    "target": "es2017",
     "allowJs": true,
-    "moduleResolution": "node",
-    "lib": [
-      "es2015",
-      "dom"
-    ]
+    "lib": ["esnext", "dom"]
   },
-  "include": [
-    "./src/"
-  ]
+  "include": ["./src/"]
 }
