@@ -22,7 +22,7 @@
     "@types/chrome": "^0.0.62",
     "@types/node": "^9.6.0",
     "@types/webpack": "^4.1.2",
-    "awesome-typescript-loader": "^4.0.1",
+    "awesome-typescript-loader": "^5.0.0",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.1",
     "prettier": "^1.11.1",
