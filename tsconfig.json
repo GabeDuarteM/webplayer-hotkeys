@@ -6,7 +6,8 @@
     "module": "commonjs",
     "target": "es2017",
     "allowJs": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "typeRoots": ["./node_modules/@types/", "./src/@types"]
   },
   "include": ["./src/"]
 }

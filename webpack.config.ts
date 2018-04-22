@@ -1,6 +1,6 @@
-import * as BabelMinifyPlugin from "babel-minify-webpack-plugin"
 import * as CleanWebpackPlugin from "clean-webpack-plugin"
-import CopyWebpackPlugin from "copy-webpack-plugin"
+import * as CopyWebpackPlugin from "copy-webpack-plugin"
+import * as ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
 import { join, resolve } from "path"
 import * as webpack from "webpack"
 
@@ -23,9 +23,15 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.(t|j)s?$/,
-        use: { loader: "awesome-typescript-loader" },
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
       },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
     ],
   },
   output: {
@@ -33,7 +39,11 @@ const config: webpack.Configuration = {
     path: join(__dirname, "dist"),
     publicPath: "/",
   },
-  plugins: [new CleanWebpackPlugin(["dist"]), CopyWebpackPlugin(getPatterns())],
+  plugins: [
+    new CleanWebpackPlugin(["dist"]),
+    new CopyWebpackPlugin(getPatterns()),
+    new ForkTsCheckerWebpackPlugin(),
+  ],
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
   },
