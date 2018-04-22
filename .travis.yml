@@ -3,6 +3,5 @@ node_js:
   - node
 script:
   - yarn build:ci
-os:
-  - linux
-  - osx
+after_success:
+  - yarn release 

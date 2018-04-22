@@ -1,6 +1,6 @@
 {
   "name": "webplayer-hotkeys",
-  "version": "1.1.1",
+  "version": "0.0.0-development",
   "main": "src\\background.ts",
   "repository": "https://github.com/GabrielDuarteM/Webplayer-Hotkeys.git",
   "author": "Gabriel Duarte <gabrielqduarte@gmail.com> (https://github.com/GabrielDuarteM/)",
@@ -13,7 +13,8 @@
     "lint": "yarn lint:tslint && yarn lint:prettier",
     "lint:tslint": "tslint 'src/**/*.ts' '*.ts' -p tsconfig.json",
     "lint:prettier": "prettier **/*.ts -l",
-    "webpack": "webpack --progress"
+    "webpack": "webpack --progress",
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.64",
@@ -25,6 +26,8 @@
     "copy-webpack-plugin": "^4.5.1",
     "fork-ts-checker-webpack-plugin": "^0.4.1",
     "prettier": "^1.12.1",
+    "semantic-release": "^15.1.7",
+    "semantic-release-chrome": "^1.0.0",
     "source-map-loader": "^0.2.3",
     "ts-loader": "^4.2.0",
     "ts-node": "^6.0.0",
