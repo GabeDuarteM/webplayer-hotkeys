@@ -17,7 +17,7 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.64",
+    "@types/chrome": "^0.0.65",
     "@types/clean-webpack-plugin": "^0.1.2",
     "@types/copy-webpack-plugin": "^4.4.1",
     "@types/node": "^9.6.6",
