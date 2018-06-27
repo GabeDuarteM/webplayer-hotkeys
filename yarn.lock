@@ -91,9 +91,9 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/aggregate-error/-/aggregate-error-1.0.0.tgz#7f811586f42802b1d84223536545263af931d89e"
 
-"@types/chrome@^0.0.64":
-  version "0.0.64"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.64.tgz#c5098de7a5a522ca6271809279973e42d2102c20"
+"@types/chrome@^0.0.69":
+  version "0.0.69"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.69.tgz#1d45bb79dd712b05704e4411f9eff3f270e19651"
   dependencies:
     "@types/filesystem" "*"
 
