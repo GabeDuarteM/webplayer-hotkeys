@@ -124,9 +124,9 @@
   version "8.0.14"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.14.tgz#4a19dc6bb61d16c01cbadc7b30ac23518fff176b"
 
-"@types/node@^10.5.0":
-  version "10.5.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.0.tgz#f5b61395c09b47ac46aaa1452750c9a72b3d3673"
+"@types/node@^10.5.8":
+  version "10.5.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.8.tgz#6f14ccecad1d19332f063a6a764f8907801fece0"
 
 "@types/source-map@*":
   version "0.5.0"
