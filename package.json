@@ -24,7 +24,7 @@
     "@types/webpack": "^4.4.4",
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
-    "fork-ts-checker-webpack-plugin": "^0.4.2",
+    "fork-ts-checker-webpack-plugin": "^0.4.8",
     "prettier": "^1.13.7",
     "semantic-release": "^15.6.0",
     "semantic-release-chrome": "^1.0.1",
