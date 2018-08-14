@@ -28,7 +28,7 @@
     "prettier": "^1.13.7",
     "semantic-release": "^15.6.0",
     "semantic-release-chrome": "^1.0.1",
-    "source-map-loader": "^0.2.3",
+    "source-map-loader": "^0.2.4",
     "ts-loader": "^4.4.2",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
