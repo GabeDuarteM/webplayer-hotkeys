@@ -99,9 +99,9 @@
   dependencies:
     "@types/webpack" "*"
 
-"@types/copy-webpack-plugin@^4.4.1":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-4.4.1.tgz#b1fcc2d4f9e13fac5d430bd2a4a54310e019d384"
+"@types/copy-webpack-plugin@^4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@types/copy-webpack-plugin/-/copy-webpack-plugin-4.4.2.tgz#6dfac0dc8692378f76a20c6c1bbe01eec438f316"
   dependencies:
     "@types/minimatch" "*"
     "@types/webpack" "*"
