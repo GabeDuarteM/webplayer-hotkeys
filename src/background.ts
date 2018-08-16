@@ -1,6 +1,6 @@
-import { ICommand, IPlayer, IPlayerTab } from "./types"
+import { Command, Player, PlayerTab } from "./types"
 
-const players: IPlayer[] = [
+const players: Player[] = [
   {
     controlQueries: {
       next: ".spoticon-skip-forward-16",
@@ -47,19 +47,10 @@ const players: IPlayer[] = [
   },
 ]
 
-const onCommand = async (command: ICommand): Promise<void> => {
-  const openedPlayers = await CheckOpenedPlayers()
-  if (openedPlayers.length) {
-    ExecuteCommandPlayer(openedPlayers[0], command)
-  } else {
-    OpenDefaultPlayer()
-  }
-}
-
-const CheckOpenedPlayers = (): Promise<IPlayerTab[]> => {
-  return new Promise<IPlayerTab[]>((resolve, reject) => {
+const checkOpenedPlayers = (): Promise<PlayerTab[]> =>
+  new Promise<PlayerTab[]>((resolve, reject) => {
     try {
-      const openedPlayers: IPlayerTab[] = []
+      const openedPlayers: PlayerTab[] = []
       let checkedPlayers = 0
       players.forEach(player => {
         chrome.tabs.query({ url: player.tabQuery }, tabs => {
@@ -77,21 +68,8 @@ const CheckOpenedPlayers = (): Promise<IPlayerTab[]> => {
       reject(err)
     }
   })
-}
 
-const ExecuteCommandPlayer = (
-  openedPlayer: IPlayerTab,
-  command: ICommand,
-): void => {
-  const querySelector = GetSelector(openedPlayer.player, command)
-  const code = `document.querySelector('${querySelector}').click()`
-
-  if (openedPlayer.tab.id) {
-    chrome.tabs.executeScript(openedPlayer.tab.id, { code })
-  }
-}
-
-const GetSelector = (player: IPlayer, command: ICommand) => {
+const getSelector = (player: Player, command: Command) => {
   switch (command) {
     case "prev":
       return player.controlQueries.prev
@@ -105,7 +83,19 @@ const GetSelector = (player: IPlayer, command: ICommand) => {
   }
 }
 
-const OpenDefaultPlayer = () => {
+const executeCommandPlayer = (
+  openedPlayer: PlayerTab,
+  command: Command,
+): void => {
+  const querySelector = getSelector(openedPlayer.player, command)
+  const code = `document.querySelector('${querySelector}').click()`
+
+  if (openedPlayer.tab.id) {
+    chrome.tabs.executeScript(openedPlayer.tab.id, { code })
+  }
+}
+
+const openDefaultPlayer = () => {
   const defaultPlayer = players.find(x => x.default)
 
   if (defaultPlayer) {
@@ -113,8 +103,17 @@ const OpenDefaultPlayer = () => {
   }
 }
 
+const onCommand = async (command: Command): Promise<void> => {
+  const openedPlayers = await checkOpenedPlayers()
+  if (openedPlayers.length) {
+    executeCommandPlayer(openedPlayers[0], command)
+  } else {
+    openDefaultPlayer()
+  }
+}
+
 chrome.commands.onCommand.addListener(onCommand as any)
 
-chrome.runtime.onInstalled.addListener(details => {
+chrome.runtime.onInstalled.addListener(() => {
   chrome.tabs.create({ url: chrome.runtime.getURL("first-time/index.html") })
 })

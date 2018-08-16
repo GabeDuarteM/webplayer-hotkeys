@@ -6,34 +6,23 @@
   "author": "Gabriel Duarte <gabrielqduarte@gmail.com> (https://github.com/GabrielDuarteM/)",
   "license": "MIT",
   "scripts": {
-    "start": "yarn build:dev --w",
-    "build": "yarn webpack --mode production --env.env=prod",
-    "build:dev": "yarn webpack --mode development --env.env=dev",
-    "build:ci": "yarn lint && yarn build:dev && yarn build",
-    "lint": "yarn lint:tslint && yarn lint:prettier",
-    "lint:tslint": "tslint 'src/**/*.ts' '*.ts' -p tsconfig.json",
-    "lint:prettier": "prettier **/*.ts -l",
-    "webpack": "webpack --progress",
+    "start": "gd-scripts start",
+    "build": "gd-scripts build",
+    "lint": "gd-scripts lint",
+    "ci": "gd-scripts ci",
     "release": "semantic-release"
+  },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.69",
-    "@types/clean-webpack-plugin": "^0.1.2",
-    "@types/copy-webpack-plugin": "^4.4.1",
     "@types/node": "^10.5.0",
-    "@types/webpack": "^4.4.4",
-    "clean-webpack-plugin": "^0.1.19",
-    "copy-webpack-plugin": "^4.5.2",
-    "fork-ts-checker-webpack-plugin": "^0.4.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "gd-scripts": "^1.2.0",
     "prettier": "^1.13.7",
     "semantic-release": "^15.6.0",
-    "semantic-release-chrome": "^1.0.1",
-    "source-map-loader": "^0.2.3",
-    "ts-loader": "^4.4.2",
-    "ts-node": "^7.0.0",
-    "tslint": "^5.10.0",
-    "typescript": "^2.9.2",
-    "webpack": "^4.13.0",
-    "webpack-cli": "^3.0.8"
+    "semantic-release-chrome": "^1.0.1"
   }
 }

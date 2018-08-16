@@ -1,4 +1,4 @@
-export interface IPlayer {
+export interface Player {
   title: string
   url: string
   tabQuery: string
@@ -10,9 +10,9 @@ export interface IPlayer {
   default: boolean
 }
 
-export interface IPlayerTab {
-  player: IPlayer
+export interface PlayerTab {
+  player: Player
   tab: chrome.tabs.Tab
 }
 
-export type ICommand = "play" | "next" | "prev"
+export type Command = "play" | "next" | "prev"
