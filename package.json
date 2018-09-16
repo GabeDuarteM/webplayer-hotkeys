@@ -20,7 +20,7 @@
     "@types/node": "^10.7.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
-    "gd-scripts": "^1.2.0",
+    "gd-scripts": "^3.0.0",
     "prettier": "^1.14.2",
     "semantic-release": "^15.9.8",
     "semantic-release-chrome": "^1.0.2"
