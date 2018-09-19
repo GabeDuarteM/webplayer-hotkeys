@@ -702,9 +702,9 @@
     into-stream "^3.1.0"
     lodash "^4.17.4"
 
-"@types/chrome@^0.0.72":
-  version "0.0.72"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.72.tgz#ab34692f69c806e6f02c0189e4cdb4d4722572c7"
+"@types/chrome@^0.0.74":
+  version "0.0.74"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.74.tgz#f69827c48fcf7fecc90c96089807661749a5a5e3"
   dependencies:
     "@types/filesystem" "*"
 
