@@ -14,9 +14,9 @@ const players: Player[] = [
   },
   {
     controlQueries: {
-      next: ".control.control-next, .player-controls .svg-icon-group .svg-icon-group-item:nth-of-type(1) button",
+      next: ".control.control-next, .player-controls .svg-icon-group .svg-icon-group-item:nth-of-type(5) button",
       play: ".control.control-play, .player-controls .svg-icon-group .svg-icon-group-item:nth-of-type(3) button",
-      prev: ".control.control-prev, .player-controls .svg-icon-group .svg-icon-group-item:nth-of-type(5) button",
+      prev: ".control.control-prev, .player-controls .svg-icon-group .svg-icon-group-item:nth-of-type(1) button",
     },
     default: false,
     tabQuery: "*://*.deezer.com/*",
