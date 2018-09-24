@@ -10,7 +10,7 @@ const players: Player[] = [
     default: true,
     tabQuery: '*://*.spotify.com/*',
     title: 'spotify',
-    url: 'https://play.spotify.com/',
+    url: 'https://open.spotify.com/',
   },
   {
     controlQueries: {
