@@ -1,0 +1,5 @@
+package-lock.json    diff=nodiff
+yarn.lock    diff=nodiff
+
+* text=auto
+*.js text eol=lf
