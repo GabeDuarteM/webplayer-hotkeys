@@ -4,7 +4,6 @@ module.exports = {
     {
       path: 'semantic-release-chrome',
       asset: 'webplayer-hotkeys.zip',
-      distFolder: 'build',
     },
   ],
   publish: [
