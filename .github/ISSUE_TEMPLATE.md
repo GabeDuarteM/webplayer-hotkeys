@@ -25,7 +25,6 @@ understand what's going on and fix the issue.
 | Operational System |         |
 | Extension version  |         |
 
-
 ## What you did:
 
 ## What happened:

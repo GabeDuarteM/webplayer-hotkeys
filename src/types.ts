@@ -15,4 +15,4 @@ export interface PlayerTab {
   tab: chrome.tabs.Tab
 }
 
-export type Command = "play" | "next" | "prev"
+export type Command = 'play' | 'next' | 'prev'
