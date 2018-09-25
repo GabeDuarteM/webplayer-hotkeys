@@ -1,16 +1,16 @@
-import { Command, Player, PlayerTab } from "./types"
+import { Command, Player, PlayerTab } from './types'
 
 const players: Player[] = [
   {
     controlQueries: {
-      next: ".spoticon-skip-forward-16",
-      play: ".player-controls__buttons button:nth-child(3)",
-      prev: ".spoticon-skip-back-16",
+      next: '.spoticon-skip-forward-16',
+      play: '.player-controls__buttons button:nth-child(3)',
+      prev: '.spoticon-skip-back-16',
     },
     default: true,
-    tabQuery: "*://*.spotify.com/*",
-    title: "spotify",
-    url: "https://play.spotify.com/",
+    tabQuery: '*://*.spotify.com/*',
+    title: 'spotify',
+    url: 'https://open.spotify.com/',
   },
   {
     controlQueries: {
@@ -19,31 +19,31 @@ const players: Player[] = [
       prev: ".control.control-prev, .player-controls .svg-icon-group-item:nth-of-type(1) button",
     },
     default: false,
-    tabQuery: "*://*.deezer.com/*",
-    title: "deezer",
-    url: "https://www.deezer.com/",
+    tabQuery: '*://*.deezer.com/*',
+    title: 'deezer',
+    url: 'https://www.deezer.com/',
   },
   {
     controlQueries: {
-      next: ".skipControl__next",
-      play: ".playControl",
-      prev: ".skipControl__previous",
+      next: '.skipControl__next',
+      play: '.playControl',
+      prev: '.skipControl__previous',
     },
     default: false,
-    tabQuery: "*://soundcloud.com/*",
-    title: "soundcloud",
-    url: "https://soundcloud.com/",
+    tabQuery: '*://soundcloud.com/*',
+    title: 'soundcloud',
+    url: 'https://soundcloud.com/',
   },
   {
     controlQueries: {
-      next: ".ytp-next-button.ytp-button",
-      play: ".ytp-play-button.ytp-button",
-      prev: ".ytp-prev-button.ytp-button",
+      next: '.ytp-next-button.ytp-button',
+      play: '.ytp-play-button.ytp-button',
+      prev: '.ytp-prev-button.ytp-button',
     },
     default: false,
-    tabQuery: "*://www.youtube.com/watch?v=*",
-    title: "youtube",
-    url: "https://www.youtube.com/",
+    tabQuery: '*://www.youtube.com/watch?v=*',
+    title: 'youtube',
+    url: 'https://www.youtube.com/',
   },
 ]
 
@@ -71,15 +71,15 @@ const checkOpenedPlayers = (): Promise<PlayerTab[]> =>
 
 const getSelector = (player: Player, command: Command) => {
   switch (command) {
-    case "prev":
+    case 'prev':
       return player.controlQueries.prev
-    case "play":
+    case 'play':
       return player.controlQueries.play
-    case "next":
+    case 'next':
       return player.controlQueries.next
 
     default:
-      throw new Error("webplayer-hotkeys: command not found")
+      throw new Error('webplayer-hotkeys: command not found')
   }
 }
 
@@ -115,5 +115,5 @@ const onCommand = async (command: Command): Promise<void> => {
 chrome.commands.onCommand.addListener(onCommand as any)
 
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.tabs.create({ url: chrome.runtime.getURL("first-time/index.html") })
+  chrome.tabs.create({ url: chrome.runtime.getURL('first-time/index.html') })
 })

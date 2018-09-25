@@ -1,5 +1,5 @@
 {
-  "extends": "./node_modules/gd-scripts/build/config/tsconfig.json",
+  "extends": "./node_modules/gd-scripts/typescript.json",
   "compilerOptions": {
     "lib": ["dom", "esnext"]
   }

@@ -24,4 +24,4 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-build
+/dist
