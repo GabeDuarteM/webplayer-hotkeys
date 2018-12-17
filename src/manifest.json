@@ -3,7 +3,7 @@
   "name": "Webplayer Hotkeys - Shortcuts for web players",
   "version": "0.0.0",
   "description":
-    "Assign hotkeys to play/pause, and switch music. Works with Spotify, Deezer, SoundCloud and Youtube.",
+    "Assign hotkeys to play/pause, and switch music. Works with Spotify, Deezer, SoundCloud, Youtube and Youtube Music.",
   "icons": {
     "128": "icon.png"
   },
