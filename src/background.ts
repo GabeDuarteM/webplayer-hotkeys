@@ -44,7 +44,7 @@ const players: Player[] = [
       prev: '.previous-button.ytmusic-player-bar',
     },
     default: false,
-    tabQuery: '*://music.youtube.com/',
+    tabQuery: '*://music.youtube.com/*',
     title: 'youtubemusic',
     url: 'https://music.youtube.com/',
   },
