@@ -39,6 +39,17 @@ const players: Player[] = [
   },
   {
     controlQueries: {
+      next: '.next-button.ytmusic-player-bar',
+      play: '.play-pause-button.ytmusic-player-bar',
+      prev: '.previous-button.ytmusic-player-bar',
+    },
+    default: false,
+    tabQuery: '*://music.youtube.com/*',
+    title: 'youtubemusic',
+    url: 'https://music.youtube.com/',
+  },
+  {
+    controlQueries: {
       next: '.ytp-next-button.ytp-button',
       play: '.ytp-play-button.ytp-button',
       prev: '.ytp-prev-button.ytp-button',
