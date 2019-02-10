@@ -8773,10 +8773,10 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.7.5"
 
-semantic-release-chrome@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/semantic-release-chrome/-/semantic-release-chrome-1.0.2.tgz#419bcbab8a302777b7609d03def6bb6c6c1cd0e8"
-  integrity sha512-pIq8RESbVPXfZgR4RJPo7vEt8zv7WNl+kqSVfPwPnJSLyFVdxuKOM3C0ej2KClCr6IZi6/6X6771lE+zZVyPZA==
+semantic-release-chrome@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/semantic-release-chrome/-/semantic-release-chrome-1.1.0.tgz#717fbba0e7af4a2a7f1a0283f940f8e7d94c82d8"
+  integrity sha512-b7rhlWwdPIrhlaMeaI41wSIHspZS6GIXhn7UN0H36oKEcyaF0cJ4VwTjsb6vNPgo1QF4xy3flV4qCXk7zNqpBQ==
   dependencies:
     "@semantic-release/error" "^2.2.0"
     aggregate-error "^1.0.0"
