@@ -66,8 +66,8 @@ const checkOpenedPlayers = (): Promise<PlayerTab[]> =>
     try {
       const openedPlayers: PlayerTab[] = []
       let checkedPlayers = 0
-      players.forEach(player => {
-        chrome.tabs.query({ url: player.tabQuery }, tabs => {
+      players.forEach((player) => {
+        chrome.tabs.query({ url: player.tabQuery }, (tabs) => {
           checkedPlayers++
           if (tabs.length && tabs[0].id) {
             openedPlayers.push({ player, tab: tabs[0] })
@@ -83,7 +83,7 @@ const checkOpenedPlayers = (): Promise<PlayerTab[]> =>
     }
   })
 
-const getSelector = (player: Player, command: Command) => {
+const getSelector = (player: Player, command: Command): string => {
   switch (command) {
     case 'prev':
       return player.controlQueries.prev
@@ -109,8 +109,8 @@ const executeCommandPlayer = (
   }
 }
 
-const openDefaultPlayer = () => {
-  const defaultPlayer = players.find(x => x.default)
+const openDefaultPlayer = (): void => {
+  const defaultPlayer = players.find((x) => x.default)
 
   if (defaultPlayer) {
     chrome.tabs.create({ url: defaultPlayer.url })
