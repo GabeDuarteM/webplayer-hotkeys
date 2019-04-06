@@ -42,8 +42,8 @@ MIT
 
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
-[build-badge]: https://img.shields.io/travis/GabrielDuarteM/webplayer-hotkeys/master.svg?style=flat-square
-[build]: https://travis-ci.org/GabrielDuarteM/webplayer-hotkeys
+[build-badge]: https://img.shields.io/travis/com/GabrielDuarteM/webplayer-hotkeys/master.svg?style=flat-square
+[build]: https://travis-ci.com/GabrielDuarteM/webplayer-hotkeys
 [coverage-badge]: https://img.shields.io/codecov/c/github/GabrielDuarteM/webplayer-hotkeys.svg?style=flat-square
 [coverage]: https://codecov.io/github/GabrielDuarteM/webplayer-hotkeys
 [version-badge]: https://img.shields.io/npm/v/webplayer-hotkeys.svg?style=flat-square
