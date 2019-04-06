@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@types/chrome": "0.0.81",
-    "@types/node": "10.12.24",
+    "@types/node": "11.13.0",
     "gd-scripts": "4.0.0",
     "semantic-release": "15.13.3",
     "semantic-release-chrome": "1.1.1"
