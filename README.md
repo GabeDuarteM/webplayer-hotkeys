@@ -7,6 +7,8 @@
 <hr />
 
 [![Build Status][build-badge]][build]
+[![version][version-badge]][package]
+[![downloads][downloads-badge]][package]
 [![MIT License][license-badge]][license]
 
 [![PRs Welcome][prs-badge]][prs]
@@ -46,9 +48,9 @@ MIT
 [build]: https://travis-ci.com/GabrielDuarteM/webplayer-hotkeys
 [coverage-badge]: https://img.shields.io/codecov/c/github/GabrielDuarteM/webplayer-hotkeys.svg?style=flat-square
 [coverage]: https://codecov.io/github/GabrielDuarteM/webplayer-hotkeys
-[version-badge]: https://img.shields.io/npm/v/webplayer-hotkeys.svg?style=flat-square
-[package]: https://www.npmjs.com/package/webplayer-hotkeys
-[downloads-badge]: https://img.shields.io/npm/dm/webplayer-hotkeys.svg?style=flat-square
+[version-badge]: https://img.shields.io/chrome-web-store/v/ikmkicnmahfdilneilgibeppbnolgkaf.svg?style=flat-square
+[package]: https://chrome.google.com/webstore/detail/youtube-autoclose-ads/ikmkicnmahfdilneilgibeppbnolgkaf
+[downloads-badge]: https://img.shields.io/chrome-web-store/users/ikmkicnmahfdilneilgibeppbnolgkaf.svg?style=flat-square
 [npmtrends]: http://www.npmtrends.com/webplayer-hotkeys
 [license-badge]: https://img.shields.io/github/license/GabrielDuarteM/webplayer-hotkeys.svg?style=flat-square
 [license]: https://github.com/GabrielDuarteM/webplayer-hotkeys/blob/master/LICENSE
