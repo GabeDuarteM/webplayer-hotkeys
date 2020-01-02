@@ -29,9 +29,9 @@ const players: Player[] = [
   },
   {
     controlQueries: {
-      next: '.skipControl__next',
-      play: '.playControl',
-      prev: '.skipControl__previous',
+      next: '.playControls__next',
+      play: 'button[title="Pause current"],button[title="Play current"]',
+      prev: '.playControls__prev',
     },
     default: false,
     tabQuery: '*://soundcloud.com/*',
