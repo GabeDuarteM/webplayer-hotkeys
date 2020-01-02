@@ -4,7 +4,8 @@ const players: Player[] = [
   {
     controlQueries: {
       next: '.spoticon-skip-forward-16',
-      play: '.player-controls__buttons button:nth-child(3)',
+      play:
+        '[aria-label="Player controls"] button[title="Pause"],[aria-label="Player controls"] button[title="Play"]',
       prev: '.spoticon-skip-back-16',
     },
     default: true,
