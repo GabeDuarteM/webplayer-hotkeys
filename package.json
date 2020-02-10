@@ -15,7 +15,7 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@types/chrome": "0.0.93",
+    "@types/chrome": "0.0.94",
     "@types/node": "13.7.0",
     "gd-scripts": "5.0.9",
     "semantic-release": "15.14.0",
