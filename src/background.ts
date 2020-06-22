@@ -4,9 +4,8 @@ const players: Player[] = [
   {
     controlQueries: {
       next: '.spoticon-skip-forward-16',
-      play:
-        '[aria-label="Player controls"] button[title="Pause"],[aria-label="Player controls"] button[title="Play"]',
-      prev: '.spoticon-skip-back-16',
+      play: '.spoticon-play-16,.spoticon-pause-16',
+      prev: '.spoticon-skip-back-16'
     },
     default: true,
     tabQuery: '*://*.spotify.com/*',
