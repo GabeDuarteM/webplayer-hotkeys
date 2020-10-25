@@ -18,7 +18,7 @@
     "@types/chrome": "0.0.101",
     "@types/node": "13.9.3",
     "gd-scripts": "5.0.9",
-    "semantic-release": "15.14.0",
+    "semantic-release": "17.2.1",
     "semantic-release-chrome": "1.1.3"
   }
 }
