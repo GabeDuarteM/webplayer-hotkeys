@@ -3,10 +3,10 @@ import { Command, Player, PlayerTab } from './types'
 const players: Player[] = [
   {
     controlQueries: {
-      next: '.spoticon-skip-forward-16',
+      next: '[aria-label="Player controls"] button[aria-label="Next"]',
       play:
-        '[aria-label="Player controls"] button[title="Pause"],[aria-label="Player controls"] button[title="Play"]',
-      prev: '.spoticon-skip-back-16',
+        '[aria-label="Player controls"] button[aria-label="Pause"],[aria-label="Player controls"] button[aria-label="Play"]',
+      prev: '[aria-label="Player controls"] button[aria-label="Previous"]',
     },
     default: true,
     tabQuery: '*://*.spotify.com/*',
@@ -40,9 +40,9 @@ const players: Player[] = [
   },
   {
     controlQueries: {
-      next: '.next-button.ytmusic-player-bar',
+      next: '.ytmusic-player-bar [aria-label="Next"]',
       play: '.play-pause-button.ytmusic-player-bar',
-      prev: '.previous-button.ytmusic-player-bar',
+      prev: '.ytmusic-player-bar [aria-label="Previous"]',
     },
     default: false,
     tabQuery: '*://music.youtube.com/*',
